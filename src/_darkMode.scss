@@ -1,0 +1,39 @@
+@mixin flexBox($width) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: $width;
+  height: 15vh;
+}
+.hero-dark {
+  background-color: rgb(15, 15, 15);
+  transition: all ease 0.3s;
+}
+.header-dark {
+  @include flexBox(100%);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  background-color: rgb(15, 15, 15);
+  transition: all ease 0.3s;
+}
+.nav {
+  @include flexBox(100%);
+  flex: 2;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  img {
+    width: 100px;
+  }
+}
+.switch {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}

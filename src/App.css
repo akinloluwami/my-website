@@ -1,38 +1,455 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+.hover-effect {
+  padding: 10px;
+  display: inline-block;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hover-effect:before,
+.hover-effect:after {
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#0a459b), to(#1f6dea));
+  background: linear-gradient(to right, #0a459b 0%, #1f6dea 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.hover-effect:before {
+  bottom: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.hover-effect:after {
+  top: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.hover-effect:hover:before,
+.hover-effect:hover:after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+a,
+a > span {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  line-height: 10px;
+}
+
+a:before,
+a:after,
+a > span:before,
+a > span:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background: -webkit-gradient(linear, left top, right top, from(#0a459b), to(#1f6dea));
+    background: linear-gradient(to right, #0a459b 0%, #1f6dea 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-gradient(linear, right top, left top, color-stop(100%, #1f6dea), color-stop(0%, #0a459b));
+    background: linear-gradient(to left, #1f6dea 100%, #0a459b 0%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes gradient {
+  0% {
+    background: -webkit-gradient(linear, left top, right top, from(#0a459b), to(#1f6dea));
+    background: linear-gradient(to right, #0a459b 0%, #1f6dea 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-gradient(linear, right top, left top, color-stop(100%, #1f6dea), color-stop(0%, #0a459b));
+    background: linear-gradient(to left, #1f6dea 100%, #0a459b 0%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.hero-dark {
+  background-color: #0f0f0f;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.header-dark {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 15vh;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  background-color: #0f0f0f;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 15vh;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
 }
+
+.nav img {
+  width: 100px;
+}
+
+.switch {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 20px;
+}
+
+.App {
+  font-family: "Poppins", sans-serif;
+}
+
+.App .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 30px;
+}
+
+.App .about .left {
+  background-color: #1f6dea;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+}
+
+.App .about .right {
+  width: 50%;
+}
+
+.App .about .right h1 {
+  color: #1f6dea;
+}
+
+.App .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .projects h1 {
+  color: #1f6dea;
+  padding: 20px;
+}
+
+.App .projects .proj {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  margin: auto;
+  -webkit-box-shadow: 1px 5px 30px -22px rgba(0, 0, 0, 0.75);
+          box-shadow: 1px 5px 30px -22px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  margin: 30px 0;
+}
+
+.App .projects .proj .left {
+  background-color: #0a459b;
+  width: 90%;
+  border-radius: 20px 0 0 20px;
+}
+
+.App .projects .proj .right {
+  margin: 0 30px;
+}
+
+.App .projects .proj .right h3 {
+  color: #1f6dea;
+  margin: 10px 0;
+}
+
+.App .projects .proj .right .tags {
+  padding: 10px 0;
+}
+
+.App .projects .proj .right .tags small {
+  color: #58a6ff;
+  background-color: #111d2f;
+  border-radius: 20px;
+  font-size: 10px;
+  padding: 3px 7px;
+  margin: 0 0 0 5px;
+  cursor: pointer;
+}
+
+.App .projects .proj .right .icon {
+  font-size: 20px;
+  color: #1f6dea;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-box-shadow: -0.5px 1px 5px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: -0.5px 1px 5px 3px rgba(0, 0, 0, 0.3);
+  margin: 10px 15px 20px 0;
+}
+
+.App .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 15vh;
+  -webkit-box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.068);
+          box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.068);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  background-color: #fff;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.App .header .empty {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 10vh;
+}
+
+.App .header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 15vh;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.App .header .nav a {
+  text-decoration: none;
+  color: #a5a1a1;
+  font-weight: 500;
+}
+
+.App .header .nav img {
+  width: 100px;
+}
+
+.App .header .switch {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 20px;
+}
+
+.App .hero {
+  height: 110vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.App .hero .right img {
+  width: 700px;
+}
+
+.App .hero .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 65%;
+}
+
+.App .hero .left b {
+  color: #858484;
+}
+
+.App .hero .left h1 {
+  font-weight: 400;
+  font-size: 70px;
+  background: -webkit-gradient(linear, left top, right top, from(#0a459b), to(#1f6dea));
+  background: linear-gradient(to right, #0a459b 0%, #1f6dea 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.App .hero .left h1:hover {
+  -webkit-animation: gradient 1s linear 0s infinite;
+          animation: gradient 1s linear 0s infinite;
+}
+
+.App .hero .left .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  font-size: 20px;
+  color: #a5a1a1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+}
+
+.App .hero .left .socials .twitter {
+  background-color: #1da1f2;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+}
+
+.App .hero .left .socials .twitter:hover {
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+}
+
+.App .hero .left .socials .github {
+  background-color: #858484;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+}
+
+.App .hero .left .socials .github:hover {
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+}
+
+.App .hero .left .socials .linkedin {
+  background-color: #0a66c2;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+}
+
+.App .hero .left .socials .linkedin:hover {
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+}
+
+.App .hero .left button {
+  width: 50%;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 15px;
+  background-color: #1f6dea;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  -webkit-transition: all ease-in 0.5s;
+  transition: all ease-in 0.5s;
+  cursor: pointer;
+}
+
+.App .hero .left button:hover {
+  background-color: #0a459b;
+  -webkit-transition: all ease-in 0.5s;
+  transition: all ease-in 0.5s;
+}
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,41 @@
+$pry-color: #1f6dea;
+$sec-color: #0a459b;
+.hover-effect {
+  padding: 10px;
+  display: inline-block;
+  overflow: hidden;
+}
+.hover-effect:before,
+.hover-effect:after {
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, $sec-color 0%, $pry-color 100%);
+}
+.hover-effect:before {
+  bottom: 0;
+  transform: translateX(-100%);
+}
+.hover-effect:after {
+  top: 0;
+  transform: translateX(100%);
+}
+.hover-effect:hover:before,
+.hover-effect:hover:after {
+  transform: translateX(0);
+}
+a,
+a > span {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  line-height: 10px;
+}
+a:before,
+a:after,
+a > span:before,
+a > span:after {
+  content: "";
+  position: absolute;
+  transition: transform 0.5s ease;
+}

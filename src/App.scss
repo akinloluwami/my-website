@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import "./hoverEffect";
+@import "./animation";
+@import "./darkMode";
+$pry-color: #1f6dea;
+$sec-color: #0a459b;
+@mixin flexBox($width) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: $width;
+  height: 15vh;
+}
+@mixin social($bg) {
+  background-color: $bg;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all ease-in 0.2s;
+  &:hover {
+    transform: translateY(-15%);
+    transition: all ease-in 0.2s;
+  }
+}
+
+.App {
+  font-family: "Poppins", sans-serif;
+
+  .about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 30px;
+    .left {
+      background-color: $pry-color;
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+    }
+    .right {
+      width: 50%;
+      h1 {
+        color: $pry-color;
+      }
+    }
+  }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      color: $pry-color;
+      padding: 20px;
+    }
+    .proj {
+      display: flex;
+      width: 70%;
+      margin: auto;
+      box-shadow: 1px 5px 30px -22px rgba(0, 0, 0, 0.75);
+      border-radius: 20px;
+      margin: 30px 0;
+      .left {
+        background-color: $sec-color;
+        width: 90%;
+        border-radius: 20px 0 0 20px;
+      }
+      .right {
+        margin: 0 30px;
+        h3 {
+          color: $pry-color;
+          margin: 10px 0;
+        }
+        .tags {
+          padding: 10px 0;
+          small {
+            color: #58a6ff;
+            background-color: #111d2f;
+            border-radius: 20px;
+            font-size: 10px;
+            padding: 3px 7px;
+            margin: 0 0 0 5px;
+            cursor: pointer;
+          }
+        }
+        .icon {
+          font-size: 20px;
+          color: $pry-color;
+          background-color: #fff;
+          padding: 5px;
+          border-radius: 10px;
+          box-shadow: -0.5px 1px 5px 3px rgba(0, 0, 0, 0.3);
+          margin: 10px 15px 20px 0;
+        }
+      }
+    }
+  }
+  .my-tools {
+  }
+  .header {
+    @include flexBox(100%);
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.068);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    background-color: #fff;
+    transition: all ease 0.3s;
+
+    .empty {
+      width: 100%;
+      flex: 1;
+      height: 10vh;
+    }
+
+    .nav {
+      @include flexBox(100%);
+      flex: 2;
+
+      a {
+        text-decoration: none;
+        color: rgb(165, 161, 161);
+        font-weight: 500;
+      }
+
+      img {
+        width: 100px;
+      }
+    }
+    .switch {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+    }
+  }
+  .hero {
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: all ease 0.3s;
+
+    .right {
+      img {
+        width: 700px;
+      }
+    }
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 65%;
+      b {
+        color: #858484;
+      }
+      h1 {
+        font-weight: 400;
+        font-size: 70px;
+        background: linear-gradient(to right, $sec-color 0%, $pry-color 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &:hover {
+          animation: gradient 1s linear 0s infinite;
+        }
+      }
+      .socials {
+        display: flex;
+        width: 30%;
+        font-size: 20px;
+        color: rgb(165, 161, 161);
+        justify-content: space-between;
+        color: #fff;
+
+        .twitter {
+          @include social(#1da1f2);
+        }
+        .github {
+          @include social(#858484);
+        }
+        .linkedin {
+          @include social(#0a66c2);
+        }
+      }
+      button {
+        width: 50%;
+        text-transform: uppercase;
+        padding: 15px;
+        font-size: 15px;
+        background-color: $pry-color;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        transition: all ease-in 0.5s;
+        cursor: pointer;
+        &:hover {
+          background-color: $sec-color;
+          transition: all ease-in 0.5s;
+        }
+      }
+    }
+  }
+}

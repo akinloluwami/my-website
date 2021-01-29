@@ -1,0 +1,16 @@
+$pry-color: #1f6dea;
+$sec-color: #0a459b;
+@keyframes gradient {
+  0% {
+    background: linear-gradient(to right, $sec-color 0%, $pry-color 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(to left, $pry-color 100%, $sec-color 0%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
