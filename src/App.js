@@ -22,6 +22,7 @@ import {
   FaGit,
   FaHeart,
 } from "react-icons/fa";
+import ContactForm from "./ContactForm";
 function App() {
   {
     //const button = document.querySelector(".hero button ").innerHTML="DWONLOAD";
@@ -273,25 +274,7 @@ function App() {
       </div>
       <div className="get-in-touch">
         <h1>GET IN TOUCH</h1>
-        <form action="" className="contact">
-          <input type="text" className="name" placeholder="Name" />
-          <input
-            type="email"
-            name=""
-            id=""
-            className="email"
-            placeholder="Email"
-          />
-          <input type="text" className="subject" placeholder="Subject" />
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            className="textarea"
-          ></textarea>
-          <button type="submit">Submit</button>
-        </form>
+        <ContactForm />
       </div>
       <div className="footer">
         <p>

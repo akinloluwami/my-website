@@ -283,6 +283,9 @@ $sec-color: #0a459b;
         outline: none;
         color: #fff;
         font-size: 15px;
+        &::placeholder {
+          color: #fff;
+        }
       }
       button {
         height: 50px;

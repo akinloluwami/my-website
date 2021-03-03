@@ -596,6 +596,22 @@ a > span:after {
   font-size: 15px;
 }
 
+.App .get-in-touch .contact textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.App .get-in-touch .contact textarea:-ms-input-placeholder {
+  color: #fff;
+}
+
+.App .get-in-touch .contact textarea::-ms-input-placeholder {
+  color: #fff;
+}
+
+.App .get-in-touch .contact textarea::placeholder {
+  color: #fff;
+}
+
 .App .get-in-touch .contact button {
   height: 50px;
   border-radius: 10px;
