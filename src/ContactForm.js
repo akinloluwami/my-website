@@ -18,10 +18,10 @@ export default class ContactForm extends React.Component {
         method="POST"
         className="contact"
       >
-        <input type="text" name="name" placeholder="Name" />
-        <input type="email" name="email" placeholder="Email" />
+        <input type="text" name="name" placeholder=" Sender Name" />
+        <input type="email" name="email" placeholder="Sender Email" />
         <textarea
-          name="message"
+          name="Message"
           id=""
           cols="30"
           rows="10"
