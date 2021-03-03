@@ -167,6 +167,8 @@ a > span:after {
       -ms-flex-align: center;
           align-items: center;
   margin: 20px 30px;
+  width: 80%;
+  margin: auto;
 }
 
 .App .about .left {
@@ -252,6 +254,76 @@ a > span:after {
   -webkit-box-shadow: -0.5px 1px 5px 3px rgba(0, 0, 0, 0.3);
           box-shadow: -0.5px 1px 5px 3px rgba(0, 0, 0, 0.3);
   margin: 10px 15px 20px 0;
+}
+
+.App .my-tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.App .my-tools h1 {
+  padding: 10px;
+  color: #0a459b;
+}
+
+.App .my-tools .tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+  font-size: 50px;
+  padding: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .my-tools .tools .html {
+  color: #f06529;
+}
+
+.App .my-tools .tools .css {
+  color: #2965f1;
+}
+
+.App .my-tools .tools .js {
+  color: #f0db4f;
+}
+
+.App .my-tools .tools .react {
+  color: #61dbfb;
+}
+
+.App .my-tools .tools .figma {
+  width: 20px;
+}
+
+.App .my-tools .tools .sass {
+  color: #c69;
+}
+
+.App .my-tools .tools .wp {
+  color: #21759b;
+}
+
+.App .my-tools .tools .btsrp {
+  color: #080135;
+}
+
+.App .my-tools .tools .git {
+  color: #f1502f;
 }
 
 .App .header {
@@ -445,11 +517,109 @@ a > span:after {
   -webkit-transition: all ease-in 0.5s;
   transition: all ease-in 0.5s;
   cursor: pointer;
+  /*position: fixed;
+        bottom: 0;
+        transform: translateY(-50%);*/
 }
 
 .App .hero .left button:hover {
   background-color: #0a459b;
   -webkit-transition: all ease-in 0.5s;
   transition: all ease-in 0.5s;
+}
+
+.App .get-in-touch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 0;
+  background-color: #1f6dea;
+  color: #fff;
+  border-radius: 30px 30px 0 0;
+}
+
+.App .get-in-touch .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App .get-in-touch .contact input {
+  width: 400px;
+  height: 50px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #fff;
+  margin: 10px 0;
+  outline: none;
+  font-size: 25px;
+  color: #0a459b;
+  background-color: transparent;
+}
+
+.App .get-in-touch .contact input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.App .get-in-touch .contact input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.App .get-in-touch .contact input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.App .get-in-touch .contact input::placeholder {
+  color: #fff;
+}
+
+.App .get-in-touch .contact textarea {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin: 10px 0;
+  height: 200px;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+}
+
+.App .get-in-touch .contact button {
+  height: 50px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: #1f6dea;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.App .footer p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  word-spacing: 5px;
+}
+
+.App .footer p .icon {
+  margin: 0 5px;
 }
 /*# sourceMappingURL=App.css.map */

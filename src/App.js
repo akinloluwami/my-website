@@ -2,15 +2,29 @@ import { React, useState } from "react";
 import "./App.css";
 import logo from "./img/logo.png";
 import { HiOutlineLightBulb } from "react-icons/hi";
+import { ReactComponent as Figma } from "./img/Figma-Icon.svg";
 import {
   FaTwitter,
   FaGithub,
   FaLinkedin,
   FaFileDownload,
   FaEye,
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaJsSquare,
+  FaReact,
+  FaFigma,
+  FaSass,
+  FaWordpressSimple,
+  FaElementor,
+  FaBootstrap,
+  FaGit,
+  FaHeart,
 } from "react-icons/fa";
 function App() {
   {
+    //const button = document.querySelector(".hero button ").innerHTML="DWONLOAD";
     /*
   const [heroBg, setHeroBg] = useState(false);
   const [headerDark, setHeaderDark] = useState(false);
@@ -242,6 +256,48 @@ function App() {
       </div>
       <div className="my-tools">
         <h1>TOOLS I WORK WITH</h1>
+        <div className="tools">
+          <FaHtml5 className="html" />
+          <FaCss3 className="css" />
+          <FaJsSquare className="js" />
+          <FaReact className="react" />
+          <Figma />
+        </div>
+        <div className="tools">
+          <FaSass className="sass" />
+          <FaWordpressSimple className="wp" />
+          <FaElementor className="elmt" />
+          <FaBootstrap className="btsrp" />
+          <FaGit className="git" />
+        </div>
+      </div>
+      <div className="get-in-touch">
+        <h1>GET IN TOUCH</h1>
+        <form action="" className="contact">
+          <input type="text" className="name" placeholder="Name" />
+          <input
+            type="email"
+            name=""
+            id=""
+            className="email"
+            placeholder="Email"
+          />
+          <input type="text" className="subject" placeholder="Subject" />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            className="textarea"
+          ></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div className="footer">
+        <p>
+          Created with <FaHeart className="icon" /> {`&`}{" "}
+          <FaReact className="icon" /> by Me for Me
+        </p>
       </div>
     </div>
   );
