@@ -22,7 +22,6 @@ export default class ContactForm extends React.Component {
         <input type="email" name="Sender email" placeholder="Email" />
         <textarea
           name="Message"
-          id=""
           cols="30"
           rows="10"
           className="textarea"
