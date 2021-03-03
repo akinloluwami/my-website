@@ -24,19 +24,6 @@ import {
 } from "react-icons/fa";
 import ContactForm from "./ContactForm";
 function App() {
-  {
-    //const button = document.querySelector(".hero button ").innerHTML="DWONLOAD";
-    /*
-  const [heroBg, setHeroBg] = useState(false);
-  const [headerDark, setHeaderDark] = useState(false);
-  const [navDark, setNavDark] = useState(false);
-
-  const darkMode = () => {
-    setHeroBg(!heroBg);
-    setHeaderDark(!headerDark);
-    setNavDark(!navDark);
-  };*/
-  }
   return (
     <div className="App">
       <div className={`header`}>
